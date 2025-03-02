@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "biomejs.biome",
+    "mikestead.dotenv",
+    "christian-kohler.path-intellisense",
+    "YoavBls.pretty-ts-errors",
+    "inlang.vs-code-extension",
+    "bradlc.vscode-tailwindcss",
+    "Prisma.prisma",
+    "moonrepo.moon-console",
+    "antfu.goto-alias",
+    "inlang.vs-code-extension"
+  ]
+}
