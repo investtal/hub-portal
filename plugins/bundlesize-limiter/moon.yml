@@ -1,0 +1,12 @@
+type: "library"
+language: "typescript"
+
+workspace:
+  inheritedTasks:
+    include: ["clean"]
+
+tasks:
+  build:
+    command: "tsup"
+  build.watch:
+    command: "tsup --watch"

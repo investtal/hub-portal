@@ -1,0 +1,20 @@
+{
+  "name": "@investtal/bundlesize-limiter",
+  "version": "1.0.0",
+  "author": "harrytran998",
+  "description": "Bundlesize limiter for investtal packages",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "PRIVATE",
+  "private": true,
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
