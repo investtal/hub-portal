@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo -e "-----PRE-PUSH start -----\n"
+
+# bun test:unit
+
+echo -e "-----PRE-PUSH end -----\n"

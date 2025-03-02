@@ -1,0 +1,81 @@
+$schema: "https://moonrepo.dev/schemas/tasks.json"
+
+implicitDeps:
+  - "^:build"
+
+implicitInputs:
+  - "package.json"
+
+fileGroups:
+  configs:
+    - "*.{js,ts,json,yml,yaml}"
+  sources:
+    - "src/**/*"
+    - "package.json"
+  tests:
+    - "src/**/*.test.mts"
+    - "tests/**/*.test.mts"
+    - "tests/**/*.stories.*"
+    - "**/__tests__/**/*"
+
+tasks:
+  build:
+    command: "tsup"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(configs)"
+      - "package.json"
+    outputs:
+      - "dist"
+
+  clean:
+    command:
+      - "rm -rf dist node_modules dist"
+    options:
+      shell: true
+
+  lint:
+    command: "bun"
+    args: "biome check --apply ."
+    inputs:
+      - "/biome.json"
+      - "/tsconfig.base.json"
+      - "tsconfig.json"
+      - "@globs(sources)"
+      - "@globs(tests)"
+
+  test:
+    command:
+      - "vitest"
+    args: "run --passWithNoTests --isolate"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "vitest.config.*"
+
+  typecheck:
+    command:
+      - "tsc"
+    args: "--noEmit"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "tsconfig.json"
+      - "tsconfig.*.json"
+      - "/tsconfig.base.json"
+
+  publish:
+    command: "node ../../scripts/publishPkg.mjs"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(tests)"
+    options:
+      allowFailure: true
+
+  upgrade.deps:
+    command: "npm-check-updates --dep dev,prod,peer -u -x @types/react -x @types/react-dom -x react -x react-dom"
+    options:
+      allowFailure: true
+
+  unused-deps:
+    command: "bun depcheck -- --ignore-bin-package --ignore-dirs=dist,node_modules"

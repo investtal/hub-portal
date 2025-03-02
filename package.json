@@ -1,0 +1,72 @@
+{
+  "name": "@investtal/hub-portal",
+  "private": true,
+  "workspaces": [
+    "plugins/*"
+  ],
+  "scripts": {
+    "build": "moon :build",
+    "clean": "moon :clean && rm -rf bun.lock node_modules",
+    "test.unit": "vitest --passWithNoTests",
+    "test.unit.run": "NODE_ENV=test vitest run --passWithNoTests --isolate",
+    "test.unit.coverage": "vitest --coverage",
+    "publish": "moon :publish",
+    "lint.format": "biome check --write",
+    "lint.check": "biome check",
+    "lint.types": "moon :type-check",
+    "lint.unused-deps": "moon :unused-deps",
+    "lint.duplicate": "jscpd",
+    "upgrade.deps": "ncu --dep dev,prod,peer -u -x @types/react -x @types/react-dom -x react -x react-dom -p bun --install never && moon :upgrade.deps && bun i",
+    "postinstall": "bun scripts/post-install.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/changelog-github": "0.5.1",
+    "@changesets/cli": "2.28.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/bun": "1.2.3",
+    "@types/node": "^22.13.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.0",
+    "@vitest/coverage-v8": "3.0.6",
+    "concurrently": "^9.1.2",
+    "cross-env": "7.0.3",
+    "depcheck": "^1.4.7",
+    "esbuild": "^0.25.0",
+    "happy-dom": "17.1.3",
+    "jscpd": "4.0.5",
+    "knip": "^5.44.5",
+    "npm-check-updates": "^17.1.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsarch": "5.4.1",
+    "tslib": "2.8.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1",
+    "vitest": "3.0.6",
+    "vitest-axe": "^0.1.0",
+    "vitest-fetch-mock": "0.4.3",
+    "vitest-mock-extended": "3.0.1"
+  },
+  "engines": {
+    "node": "22.11.0",
+    "bun": ">=1.1.45"
+  },
+  "jscpd": {
+    "threshold": 0.1,
+    "pattern": "packages/**/src/**/*.ts",
+    "reporters": [
+      "html",
+      "console"
+    ],
+    "ignore": [
+      "**/__snapshots__/**",
+      "packages/**/test/**/*.ts"
+    ],
+    "absolute": true,
+    "gitignore": true
+  }
+}
