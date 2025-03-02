@@ -24,9 +24,14 @@ tasks:
     inputs:
       - "@globs(sources)"
       - "@globs(configs)"
-      - "package.json"
     outputs:
       - "dist"
+
+  build.watch:
+    command: "tsup --watch"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(configs)"
 
   clean:
     command:
@@ -65,12 +70,10 @@ tasks:
       - "/tsconfig.base.json"
 
   publish:
-    command: "node ../../scripts/publishPkg.mjs"
+    command: "npm publish"
     inputs:
       - "@globs(sources)"
       - "@globs(tests)"
-    options:
-      allowFailure: true
 
   upgrade.deps:
     command: "npm-check-updates --dep dev,prod,peer -u -x @types/react -x @types/react-dom -x react -x react-dom"

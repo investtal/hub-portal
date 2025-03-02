@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "license": "PRIVATE",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "dependencies": {
     "picocolors": "^1.1.1"
   },
@@ -16,5 +16,10 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
   }
 }
