@@ -88,7 +88,9 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   }
 }
 
-function getMetadataConfig(): DotenvParseOutput {
+export type BuildMetadata = ReturnType<typeof getMetadataConfig>
+
+function getMetadataConfig() {
   const pkgJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
   const { version: appVersion } = pkgJson
   const gitBranchName = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
@@ -100,7 +102,7 @@ function getMetadataConfig(): DotenvParseOutput {
   const buildTime = new Date().toISOString()
 
   return {
-    APP_VERSION: appVersion,
+    APP_VERSION: appVersion as string,
     GIT_BRANCH_NAME: gitBranchName,
     GIT_HASH: gitHash,
     BUILD_TIME: buildTime,

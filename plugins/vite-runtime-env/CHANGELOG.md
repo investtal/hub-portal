@@ -1,5 +1,11 @@
 # @investtal/vite-runtime-env
 
+## 1.0.4
+
+### Patch Changes
+
+- Add build metadata typing
+
 ## 1.0.3
 
 ### Patch Changes
