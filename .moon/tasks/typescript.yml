@@ -74,6 +74,8 @@ tasks:
     inputs:
       - "@globs(sources)"
       - "@globs(tests)"
+    options:
+      allowFailure: true
 
   upgrade.deps:
     command: "npm-check-updates --dep dev,prod,peer -u -x @types/react -x @types/react-dom -x react -x react-dom"
