@@ -35,15 +35,15 @@ const defaultOptions = {
   configPath: "env/config.js",
 } satisfies RuntimeEnvPluginOptions
 
-const viteRuntimeEnv = (options: RuntimeEnvPluginOptions): Plugin => {
+const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   let isDev: boolean
   let configStringJs: string
   let configStringEnv = ""
   const metadataConfig = getMetadataConfig()
-  const envPath = options.envPath ?? defaultOptions.envPath
-  const configPath = options.configPath ?? defaultOptions.configPath
-  const runtimeVariableName = options.runtimeVariableName ?? defaultOptions.runtimeVariableName
-  const metadataVariableName = options.metadataVariableName ?? defaultOptions.metadataVariableName
+  const envPath = options?.envPath ?? defaultOptions.envPath
+  const configPath = options?.configPath ?? defaultOptions.configPath
+  const runtimeVariableName = options?.runtimeVariableName ?? defaultOptions.runtimeVariableName
+  const metadataVariableName = options?.metadataVariableName ?? defaultOptions.metadataVariableName
   const metadataConfigJs = injectConfigString(metadataConfig, metadataVariableName)
 
   return {
