@@ -1,6 +1,6 @@
 {
   "name": "@investtal/vite-runtime-env",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "harrytran998",
   "description": "Vite runtime env plugin for investtal packages",
   "main": "dist/index.js",

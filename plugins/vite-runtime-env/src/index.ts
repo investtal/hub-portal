@@ -5,6 +5,7 @@ import type { DotenvParseOutput } from "dotenv"
 import dotenv from "dotenv"
 import type { Plugin } from "vite"
 
+export type BuildMetadata = ReturnType<typeof getDefaultMetadataConfig>
 export type RuntimeEnvPluginOptions = {
   /**
    * Path to the .env file
@@ -39,7 +40,7 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   let isDev: boolean
   let configStringJs: string
   let configStringEnv = ""
-  const metadataConfig = getMetadataConfig()
+  const metadataConfig = getDefaultMetadataConfig()
   const envPath = options?.envPath ?? defaultOptions.envPath
   const configPath = options?.configPath ?? defaultOptions.configPath
   const runtimeVariableName = options?.runtimeVariableName ?? defaultOptions.runtimeVariableName
@@ -88,9 +89,7 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   }
 }
 
-export type BuildMetadata = ReturnType<typeof getMetadataConfig>
-
-function getMetadataConfig() {
+export function getDefaultMetadataConfig() {
   const pkgJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
   const { version: appVersion } = pkgJson
   const gitBranchName = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
