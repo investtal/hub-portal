@@ -1,5 +1,11 @@
 # @investtal/vite-runtime-env
 
+## 1.0.3
+
+### Patch Changes
+
+- Update default name of client runtime env
+
 ## 1.0.2
 
 ### Patch Changes

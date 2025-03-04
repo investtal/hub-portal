@@ -13,7 +13,7 @@ export type RuntimeEnvPluginOptions = {
   envPath?: string
   /**
    * Name of the variable to inject on to windown
-   * @default '__RUNTIME_ENV__'
+   * @default '__CLIENT_RUNTIME_ENV__'
    */
   runtimeVariableName?: string
   /**
@@ -30,7 +30,7 @@ export type RuntimeEnvPluginOptions = {
 
 const defaultOptions = {
   envPath: ".env",
-  runtimeVariableName: "__RUNTIME_ENV__",
+  runtimeVariableName: "__CLIENT_RUNTIME_ENV__",
   metadataVariableName: "__APP_METADATA__",
   configPath: "env/config.js",
 } satisfies RuntimeEnvPluginOptions
