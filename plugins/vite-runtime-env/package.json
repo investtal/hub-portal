@@ -1,0 +1,23 @@
+{
+  "name": "@investtal/vite-runtime-env",
+  "version": "1.0.0",
+  "author": "harrytran998",
+  "description": "Vite runtime env plugin for investtal packages",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "dotenv": "^16.4.7"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  }
+}
