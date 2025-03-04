@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "outDir": "../../.moon/cache/types/plugins/bundlesize-limiter"
+    "outDir": "../../.moon/cache/types/plugins/vite-runtime-env"
   },
   "include": [
     "src/**/*"

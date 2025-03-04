@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "plugins/bundlesize-limiter"
+    },
+    {
+      "path": "plugins/vite-runtime-env"
     }
   ]
 }

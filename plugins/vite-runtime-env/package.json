@@ -9,7 +9,6 @@
   "private": false,
   "license": "MIT",
   "dependencies": {
-    "picocolors": "^1.1.1",
     "dotenv": "^16.4.7"
   },
   "engines": {
