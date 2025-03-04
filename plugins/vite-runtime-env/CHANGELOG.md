@@ -1,5 +1,11 @@
 # @investtal/vite-runtime-env
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix wrong the env mode
+
 ## 1.0.1
 
 ### Patch Changes

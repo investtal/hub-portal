@@ -49,7 +49,7 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   return {
     name: "@investtal/vite-runtime-env",
     async configResolved({ mode, command }) {
-      const envWithMode = fs.readFileSync(path.resolve(process.cwd(), `env.${mode}`), "utf8")
+      const envWithMode = fs.readFileSync(path.resolve(process.cwd(), `.env.${mode}`), "utf8")
 
       isDev = command === "serve"
 
