@@ -4,6 +4,7 @@ The hub shares our work to execute our vision about ...
 ## Plugins
 
 - [bundlesize-limiter](./plugins/bundlesize-limiter)
+- [vite-runtime-env](./plugins/vite-runtime-env)
 
 ## Development
 
