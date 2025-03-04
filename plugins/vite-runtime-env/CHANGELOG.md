@@ -1,5 +1,11 @@
 # @investtal/vite-runtime-env
 
+## 1.0.6
+
+### Patch Changes
+
+- add enforce option with default is pre
+
 ## 1.0.5
 
 ### Patch Changes

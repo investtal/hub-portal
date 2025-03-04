@@ -27,6 +27,11 @@ export type RuntimeEnvPluginOptions = {
    * @default '__APP_METADATA__'
    */
   metadataVariableName?: string
+  /**
+   * Enforce the plugin to run before other plugins
+   * @default 'pre'
+   */
+  enforce?: "pre" | "post"
 }
 
 const defaultOptions = {
@@ -34,6 +39,7 @@ const defaultOptions = {
   runtimeVariableName: "__CLIENT_RUNTIME_ENV__",
   metadataVariableName: "__APP_METADATA__",
   configPath: "env/config.js",
+  enforce: "pre",
 } satisfies RuntimeEnvPluginOptions
 
 const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
@@ -49,6 +55,7 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
 
   return {
     name: "@investtal/vite-runtime-env",
+    enforce: options?.enforce ?? defaultOptions.enforce,
     async configResolved({ mode, command }) {
       const envWithMode = fs.readFileSync(path.resolve(process.cwd(), `.env.${mode}`), "utf8")
 
