@@ -1,5 +1,11 @@
 # @investtal/vite-runtime-env
 
+## 1.1.0
+
+### Minor Changes
+
+- Export esm only
+
 ## 1.0.6
 
 ### Patch Changes

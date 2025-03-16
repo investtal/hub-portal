@@ -1,5 +1,11 @@
 # @investtal/bundlesize-limiter
 
+## 1.2.0
+
+### Minor Changes
+
+- Export esm only
+
 ## 1.1.0
 
 ### Minor Changes
