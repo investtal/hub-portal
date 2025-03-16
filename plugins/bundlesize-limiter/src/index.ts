@@ -1,5 +1,5 @@
+import { styleText } from "node:util"
 import type { Plugin } from "esbuild"
-import { cyan, dim, red } from "picocolors"
 
 export type BundlesizeLimiterPluginOptions = {
   /**
@@ -38,7 +38,12 @@ export const bundlesizeLimiterPlugin = (limit = 20): Plugin => {
           // Check if the file is a JavaScript file and not the root index file (dist/index.(js|mjs))
           const isJs = /\.m?js$/.test(size.file) && !/^dist\/index\.(m?js)$/.test(size.file)
           exceeded = exceeded ? true : isJs ? size.bytes > limit : false
-          const color = !isJs ? dim : size.bytes > limit ? red : cyan
+          const color = (text: string) =>
+            !isJs
+              ? styleText("dim", text)
+              : size.bytes > limit
+                ? styleText("red", text)
+                : styleText("cyan", text)
           console.log(
             color(`${size.file.padEnd(fileMax + 2)}${`${size.bytes}`.padStart(sizeMax)}kb`),
           )
@@ -48,7 +53,7 @@ export const bundlesizeLimiterPlugin = (limit = 20): Plugin => {
           throw new Error(`\nLimit of ${limit}kb exceeded`)
         }
 
-        console.log(cyan(`\n✓ Bundle size is under ${limit}kbs limit\n`))
+        console.log(styleText("green", `\n✓ Bundle size is under ${limit}kbs limit\n`))
       })
     },
   }

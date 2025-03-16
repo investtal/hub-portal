@@ -39,16 +39,13 @@
     "plugins/bundlesize-limiter": {
       "name": "@investtal/bundlesize-limiter",
       "version": "1.0.0",
-      "dependencies": {
-        "picocolors": "^1.1.1",
-      },
       "devDependencies": {
         "esbuild": "^0.24.0",
       },
     },
     "plugins/vite-runtime-env": {
       "name": "@investtal/vite-runtime-env",
-      "version": "1.0.0",
+      "version": "1.0.6",
       "dependencies": {
         "dotenv": "^16.4.7",
       },

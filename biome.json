@@ -1,69 +1,69 @@
 {
-	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"defaultBranch": "main"
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true,
-			"correctness": {
-				"recommended": true
-			},
-			"style": {
-				"recommended": true,
-				"noArguments": "off",
-				"noParameterAssign": "warn"
-			},
-			"suspicious": {
-				"noExplicitAny": "off",
-				"noConfusingVoidType": "off"
-			},
-			"complexity": {
-				"noUselessConstructor": "off",
-				"noBannedTypes": "warn"
-			},
-			"nursery": {
-				"recommended": true,
-				"noUnknownPseudoElement": "off",
-				"noDescendingSpecificity": "off",
-				"noDuplicateProperties": "off"
-			}
-		}
-	},
-	"formatter": {
-		"enabled": true,
-		"indentWidth": 2,
-		"indentStyle": "space",
-		"lineWidth": 100
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double",
-			"jsxQuoteStyle": "double",
-			"arrowParentheses": "asNeeded",
-			"semicolons": "asNeeded",
-			"trailingCommas": "all"
-		},
-		"parser": {
-			"unsafeParameterDecoratorsEnabled": true
-		}
-	},
-	"files": {
-		"include": ["*"],
-		"ignore": [
-			"node_modules",
-			"coverage",
-			"dist",
-			"plugins/**/node_modules",
-			"plugins/**/dist",
-			"plugins/**/**/*.d.ts",
-			"tools"
-		]
-	}
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "defaultBranch": "main"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "recommended": true
+      },
+      "style": {
+        "recommended": true,
+        "noArguments": "off",
+        "noParameterAssign": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConfusingVoidType": "off"
+      },
+      "complexity": {
+        "noUselessConstructor": "off",
+        "noBannedTypes": "warn"
+      },
+      "nursery": {
+        "recommended": true,
+        "noUnknownPseudoElement": "off",
+        "noDescendingSpecificity": "off",
+        "noDuplicateProperties": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double",
+      "arrowParentheses": "asNeeded",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "files": {
+    "include": ["*"],
+    "ignore": [
+      "node_modules",
+      "coverage",
+      "dist",
+      "plugins/**/node_modules",
+      "plugins/**/dist",
+      "plugins/**/**/*.d.ts",
+      "tools"
+    ]
+  }
 }
