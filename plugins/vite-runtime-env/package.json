@@ -4,8 +4,9 @@
   "author": "harrytran998",
   "description": "Vite runtime env plugin for investtal packages",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "private": false,
   "license": "MIT",
   "dependencies": {
