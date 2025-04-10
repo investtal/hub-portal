@@ -1,0 +1,17 @@
+type: "library"
+language: "typescript"
+
+tasks:
+  build:
+    command: "tsdown"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(configs)"
+    outputs:
+      - "dist"
+
+  build.watch:
+    command: "tsdown --watch"
+    inputs:
+      - "@globs(sources)"
+      - "@globs(configs)"

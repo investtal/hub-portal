@@ -1,0 +1,23 @@
+{
+  "name": "@investtal/toolkit",
+  "version": "1.0.0",
+  "author": "harrytran998",
+  "description": "Investtal toolkit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@investtal/types": "workspace:*"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  }
+}
