@@ -4,7 +4,5 @@
     "composite": true,
     "outDir": "../../.moon/cache/types/plugins/bundlesize-limiter"
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

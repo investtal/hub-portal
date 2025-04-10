@@ -1,0 +1,23 @@
+{
+  "name": "@investtal/types",
+  "version": "1.0.0",
+  "author": "harrytran998",
+  "description": "Investtal base types",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "@total-typescript/ts-reset": "^0.6.1",
+    "type-fest": "^4.39.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  }
+}
