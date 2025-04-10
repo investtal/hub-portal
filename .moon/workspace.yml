@@ -1,7 +1,7 @@
 $schema: https://moonrepo.dev/schemas/workspace.json
 projects:
   - plugins/*
-  
+  - packages/*
 vcs:
   defaultBranch: main
   manager: git

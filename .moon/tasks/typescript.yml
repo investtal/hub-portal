@@ -8,7 +8,7 @@ implicitInputs:
 
 fileGroups:
   configs:
-    - "*.{js,ts,json,yml,yaml}"
+    - "*.config.ts"
   sources:
     - "src/**/*"
     - "package.json"
