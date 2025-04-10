@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../../.moon/cache/types/packages/http"
+  },
+  "include": ["src/**/*"]
+}
