@@ -6,6 +6,12 @@
     },
     {
       "path": "plugins/vite-runtime-env"
+    },
+    {
+      "path": "packages/toolkit"
+    },
+    {
+      "path": "packages/http"
     }
   ]
 }
