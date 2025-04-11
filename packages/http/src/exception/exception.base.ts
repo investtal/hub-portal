@@ -1,3 +1,12 @@
+export type ExceptionBaseJSON = {
+  message: string
+  statusCode: number
+  code: string
+  stack: string | undefined
+  cause: string | undefined
+  metadata?: Record<string, any>
+}
+
 export class ExceptionBase extends Error {
   /**
    * @param {string} exMessage
@@ -25,7 +34,7 @@ export class ExceptionBase extends Error {
     super(exMessage)
   }
 
-  toJSON() {
+  toJSON(): ExceptionBaseJSON {
     return {
       message: this.exMessage,
       statusCode: this.statusCode,
