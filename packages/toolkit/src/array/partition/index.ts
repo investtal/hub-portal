@@ -8,9 +8,12 @@
        ]
  */
 // @__NO_SIDE_EFFECTS__
-export function partition<T = any>(arr: T[], fn: (val: T, index: number, arr: T[]) => boolean) {
+export function partition<T = any>(
+  arr: T[],
+  fn: (val: T, index: number, arr: T[]) => boolean,
+): MapIterator<T> {
   return arr
-    .reduce((acc, val, i, arr) => {
+    .reduce((acc: Map<any, any>, val, i, arr) => {
       const current = fn(val, i, arr)
       if (acc.has(current)) acc.get(current).push(val)
       else acc.set(current, [val])
