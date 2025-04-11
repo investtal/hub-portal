@@ -1,6 +1,6 @@
 {
   "name": "@investtal/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "harrytran998",
   "description": "Investtal base types",
   "main": "src/index.js",
@@ -15,6 +15,7 @@
   "engines": {
     "node": ">=22"
   },
+  "files": ["src", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
   "publishConfig": {
     "access": "public",
     "tag": "latest",
