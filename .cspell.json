@@ -51,5 +51,9 @@
     "lorem-ipsum",
     "es-es"
   ],
-  "words": ["ivt", "tsdown"]
+  "words": [
+    "ivt",
+    "listify",
+    "tsdown"
+  ]
 }

@@ -1,4 +1,4 @@
-import type { EntityId, NullList, UnDef } from "@techmely/types"
+import type { EntityId, NullList, UnDef } from "@investtal/types"
 import { isNumber } from "../../predicate/isNumber"
 
 /**
@@ -11,7 +11,7 @@ export function formatNumber(
   num: NullList<EntityId>,
   precision = 0,
   defaultValue: UnDef<EntityId> = "-",
-) {
+): EntityId {
   if (!isNumber(num)) {
     return defaultValue
   }

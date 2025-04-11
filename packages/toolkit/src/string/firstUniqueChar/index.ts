@@ -1,5 +1,5 @@
 // @__NO_SIDE_EFFECTS__
-export function firstUniqueChar(value: string) {
+export function firstUniqueChar(value: string): string | undefined {
   if (!value) return undefined
   const charLength = value.length
   for (let i = 0; i < charLength; i++) {

@@ -1,4 +1,4 @@
-import type { CamelToSnakeNested } from "@techmely/types"
+import type { CamelToSnakeNested } from "@investtal/types"
 import { camel2snake } from "../camel2Snake"
 
 // @__NO_SIDE_EFFECTS__

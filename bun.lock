@@ -53,6 +53,12 @@
       "devDependencies": {
         "@investtal/types": "workspace:*",
       },
+      "peerDependencies": {
+        "base-x": "^3.0.10",
+      },
+      "optionalPeers": [
+        "base-x",
+      ],
     },
     "packages/types": {
       "name": "@investtal/types",
