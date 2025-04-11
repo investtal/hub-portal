@@ -1,5 +1,5 @@
 // @__NO_SIDE_EFFECTS__
-export async function* streamAsyncIterable<T>(stream: ReadableStream<T>) {
+export async function* streamAsyncIterable<T>(stream: ReadableStream<T>): AsyncGenerator<T> {
   const reader = stream.getReader()
   try {
     while (true) {
