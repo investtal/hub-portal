@@ -1,9 +1,9 @@
 import { isServer } from "../isServer"
 
 // @__NO_SIDE_EFFECTS__
-export function isSlowConnection() {
+export function isSlowConnection(): boolean {
   if (isServer()) {
-    return
+    return false
   }
 
   // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection
