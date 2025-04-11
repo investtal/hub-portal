@@ -8,9 +8,6 @@
   "type": "module",
   "private": false,
   "license": "MIT",
-  "dependencies": {
-    "dotenv": "^16.4.7"
-  },
   "devDependencies": {
     "@investtal/types": "workspace:*"
   },
