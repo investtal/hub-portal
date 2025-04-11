@@ -1,4 +1,4 @@
 // @__NO_SIDE_EFFECTS__
-export function nextFrame() {
+export function nextFrame(): Promise<number> {
   return new Promise(requestAnimationFrame)
 }

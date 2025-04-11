@@ -1,4 +1,4 @@
-import type { StringEnum } from "@techmely/types"
+import type { StringEnum } from "@investtal/types"
 
 // @__NO_SIDE_EFFECTS__
 export function $<K extends keyof HTMLElementTagNameMap>(tag: StringEnum<K>, _targer?: Element) {

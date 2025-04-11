@@ -1,4 +1,4 @@
-import type { StringEnum } from "@techmely/types"
+import type { StringEnum } from "@investtal/types"
 import { invariant } from "../../common/invariant"
 import { isBrowser } from "../../predicate/isBrowser"
 

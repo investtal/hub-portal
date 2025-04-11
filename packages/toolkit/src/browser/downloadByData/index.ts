@@ -6,7 +6,12 @@
  * @param {BlobPart} bom
  */
 // @__NO_SIDE_EFFECTS__
-export function downloadByData(data: BlobPart, filename: string, mime?: string, bom?: BlobPart) {
+export function downloadByData(
+  data: BlobPart,
+  filename: string,
+  mime?: string,
+  bom?: BlobPart,
+): void {
   const blobData = typeof bom !== "undefined" ? [bom, data] : [data]
   const blob = new Blob(blobData, { type: mime || "application/octet-stream" })
 

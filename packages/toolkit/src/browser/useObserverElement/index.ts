@@ -2,7 +2,10 @@ import { invariant } from "../../common/invariant"
 import { isBrowser } from "../../predicate/isBrowser"
 
 // @__NO_SIDE_EFFECTS__
-export function useObserverElement() {
+export function useObserverElement(): (
+  element: Element,
+  callback: IntersectionObserverCallback,
+) => void {
   invariant(isBrowser())
 
   let observer: IntersectionObserver | null = null
