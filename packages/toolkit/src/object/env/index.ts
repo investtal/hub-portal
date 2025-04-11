@@ -10,7 +10,7 @@ const _getEnv = (useShim?: boolean) =>
   (useShim ? _envShim : globalThis)
 
 // @__NO_SIDE_EFFECTS__
-export function envShims<T extends EnvObject>() {
+export function envShims<T extends EnvObject>(): T {
   return new Proxy<T>(_envShim, {
     get(_, prop) {
       const env = _getEnv()

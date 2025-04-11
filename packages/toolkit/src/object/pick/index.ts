@@ -1,4 +1,4 @@
-import type { Records } from "@techmely/types"
+import type { Records } from "@investtal/types"
 
 /**
  * Pick nested properties from an object with path/multiple paths.

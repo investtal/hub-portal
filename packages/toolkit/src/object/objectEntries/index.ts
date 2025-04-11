@@ -4,6 +4,6 @@
  * @category Object
  */
 // @__NO_SIDE_EFFECTS__
-export function objectEntries<T extends object>(obj: T) {
+export function objectEntries<T extends object>(obj: T): [keyof T, T[keyof T]][] {
   return Object.entries(obj) as [keyof T, T[keyof T]][]
 }

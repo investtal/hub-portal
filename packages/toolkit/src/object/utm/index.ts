@@ -11,7 +11,7 @@ export type UtmSourceParams = {
 export function getUtmSourceUrl(
   basePath: string,
   { utmSource, utmMedium, utmCampaign, utmTerm, utmContent }: UtmSourceParams,
-) {
+): string {
   if (!basePath) {
     throw new Error(`Invalid basePath: ${basePath}`)
   }
