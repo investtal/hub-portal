@@ -9,7 +9,7 @@
   get(obj, 'target[2].a'); --> 'test'
  */
 // @__NO_SIDE_EFFECTS__
-export function get(from: any, selector: string): any {
+export function get<T = any>(from: any, selector: string): T {
   return selector
     .replace(/\[([^[\]]*)\]/g, ".$1.")
     .split(".")

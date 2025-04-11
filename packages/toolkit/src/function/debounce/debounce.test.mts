@@ -4,7 +4,7 @@ import { debounce } from "."
 test("debounce function", () => {
   vi.useFakeTimers()
   const mockFunction = vi.fn()
-  const debouncedFunction = debounce(mockFunction, 200)
+  const debouncedFunction = debounce(mockFunction, { wait: 200 })
 
   debouncedFunction()
   debouncedFunction()
@@ -23,7 +23,7 @@ test("debounce function", () => {
 test("Debounce function with immediate", () => {
   vi.useFakeTimers()
   const mockFunction = vi.fn()
-  const debouncedFunction = debounce(mockFunction, 200, true)
+  const debouncedFunction = debounce(mockFunction, { wait: 200, leading: true })
 
   debouncedFunction() // Executes immediately
   debouncedFunction() // Ignored
