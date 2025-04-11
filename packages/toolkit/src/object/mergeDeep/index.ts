@@ -1,4 +1,4 @@
-import type { MergeDeep } from "@techmely/types"
+import type { MergeDeep } from "@investtal/types"
 import { isObject } from "../../predicate"
 
 /**

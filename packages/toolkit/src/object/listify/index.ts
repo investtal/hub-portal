@@ -1,4 +1,4 @@
-import type { Entity } from "@techmely/types"
+import type { Entity } from "@investtal/types"
 
 /**
  * @description Map an object to an array
@@ -10,7 +10,7 @@ import type { Entity } from "@techmely/types"
 export function listify<O extends Record<string, any>, T = any>(
   obj: O,
   mapFn: (key: string, value: Entity) => any,
-) {
+): T[] {
   return Object.entries(obj).reduce((acc, [key, value]) => {
     acc.push(mapFn(key, value))
     return acc

@@ -2,7 +2,7 @@ import { isEdgeBrowser } from "../isEdgeBrowser"
 import { isOpera } from "../isOpera"
 
 // @__NO_SIDE_EFFECTS__
-export function isChrome() {
+export function isChrome(): boolean {
   if (typeof window === "undefined") return false
 
   const isChromium = window.chrome

@@ -1,6 +1,6 @@
 // Take this from https://developer.chrome.com/blog/using-requestidlecallback
 
-function requestIdleCallbackShim(cb: any) {
+function requestIdleCallbackShim(cb: any): number {
   const start = Date.now()
   return setTimeout(() => {
     cb({
@@ -11,7 +11,7 @@ function requestIdleCallbackShim(cb: any) {
 }
 
 // @__NO_SIDE_EFFECTS__
-export const requestIdleCallback =
+export const requestIdleCallback: (cb: any) => number =
   typeof window !== "undefined"
     ? window.requestIdleCallback || requestIdleCallbackShim
     : requestIdleCallbackShim

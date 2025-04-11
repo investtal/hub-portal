@@ -1,5 +1,5 @@
 // @__NO_SIDE_EFFECTS__
-export function kebabize(value: string) {
+export function kebabize(value: string): string {
   /**
     [A-Z]+(?![a-z]) matches any consecutive capital letters, excluding any capitals followed by
     a lowercase (signifying the next word). Adding |[A-Z] then includes any single capital letters.

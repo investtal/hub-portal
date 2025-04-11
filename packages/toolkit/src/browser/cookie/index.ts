@@ -130,7 +130,7 @@ export interface CookieParseOptions {
  */
 
 // biome-ignore lint/suspicious/noControlCharactersInRegex: Ignore this
-const fieldContentRegExp = /^[\u0009\u0020-\u007E\u0080-\u00FF]+$/
+const fieldContentRegExp: RegExp = /^[\u0009\u0020-\u007E\u0080-\u00FF]+$/
 
 /**
  * Parse a cookie header.
@@ -384,7 +384,7 @@ function tryDecode(str: string, decode: (v: string) => void) {
 export const listenCookieChange = (
   callback: ({ oldCookie, newCookie }) => void,
   interval = 500,
-) => {
+): void => {
   let lastCookie = document.cookie
   setInterval(() => {
     const { cookie } = document
@@ -434,7 +434,7 @@ export class CookieService {
     }
   }
 
-  set(key: string, value: string, options?: CookieSerializeOptions) {
+  set(key: string, value: string, options?: CookieSerializeOptions): void {
     const defaultOptions: CookieSerializeOptions = {
       secure: true,
       path: "/",
@@ -450,16 +450,16 @@ export class CookieService {
     }
   }
 
-  setToken(token: string, options?: CookieSerializeOptions) {
+  setToken(token: string, options?: CookieSerializeOptions): void {
     this.set(this.tokenName, token, options)
   }
 
-  getToken() {
+  getToken(): string | undefined {
     const token = this.get(this.tokenName)
     return token
   }
 
-  clearToken() {
+  clearToken(): void {
     this.set(this.tokenName, "")
   }
 }

@@ -40,9 +40,6 @@
     "packages/http": {
       "name": "@investtal/http",
       "version": "1.0.0",
-      "dependencies": {
-        "dotenv": "^16.4.7",
-      },
       "devDependencies": {
         "@investtal/types": "workspace:*",
       },

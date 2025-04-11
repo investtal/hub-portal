@@ -1,4 +1,4 @@
-import type { EntityId } from "@techmely/types"
+import type { EntityId } from "@investtal/types"
 import { digitLengthPrecision } from "../numberDigitLengthPrecision"
 import { stripPrecision } from "../numberStripPrecision"
 

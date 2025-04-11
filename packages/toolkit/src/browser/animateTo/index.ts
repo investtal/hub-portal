@@ -8,7 +8,7 @@ export function animateTo(
   el: HTMLElement,
   keyframes: Keyframe[],
   options?: KeyframeAnimationOptions,
-) {
+): Promise<unknown> {
   return new Promise(resolve => {
     if (options?.duration === Number.POSITIVE_INFINITY) {
       throw new Error("Promise-based animations must be finite.")

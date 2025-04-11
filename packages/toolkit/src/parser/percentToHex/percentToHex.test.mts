@@ -1,4 +1,4 @@
-import type { ComputeRange } from "@techmely/types"
+import type { ComputeRange } from "@investtal/types"
 import { describe, expect, test } from "vitest"
 import { percentToHex } from "."
 

@@ -1,4 +1,4 @@
-import type { EntityId } from "@techmely/types"
+import type { EntityId } from "@investtal/types"
 
 /**
  *  Number precision: Correct the given number to specifying significant digits.

@@ -1,6 +1,6 @@
 // Reference: https://github.com/lodash/lodash/blob/master/isPlainObject.js
 // @__NO_SIDE_EFFECTS__
-export function isPlainObject(value: any) {
+export function isPlainObject(value: any): boolean {
   if (!isObjectLike(value) || getTag(value) !== "[object Object]") {
     return false
   }
@@ -14,12 +14,12 @@ export function isPlainObject(value: any) {
   return Object.getPrototypeOf(value) === proto
 }
 
-function isObjectLike(value: any) {
+function isObjectLike(value: any): boolean {
   return typeof value === "object" && value !== null
 }
 
 // @__NO_SIDE_EFFECTS__
-export function getTag(value: any) {
+export function getTag(value: any): string {
   if (value == null) {
     return value === undefined ? "[object Undefined]" : "[object Null]"
   }

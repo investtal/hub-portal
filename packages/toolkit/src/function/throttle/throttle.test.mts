@@ -4,7 +4,7 @@ vi.useFakeTimers()
 
 test("throttle function", () => {
   const mockFunction = vi.fn()
-  const throttledFunction = throttle(mockFunction, 200)
+  const throttledFunction = throttle(mockFunction, { wait: 200 })
 
   throttledFunction()
   throttledFunction()

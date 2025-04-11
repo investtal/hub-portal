@@ -1,5 +1,5 @@
 // @__NO_SIDE_EFFECTS__
-export function isSupportsRequestStreams() {
+export function isSupportsRequestStreams(): boolean {
   let duplexAccessed = false
   let hasContentType = false
   const supportsReadableStream = typeof globalThis.ReadableStream === "function"

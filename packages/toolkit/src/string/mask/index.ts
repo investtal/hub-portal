@@ -14,7 +14,7 @@ import { invariant } from "../../common/invariant"
  * @param mask - The character to use as a mask
  */
 // @__NO_SIDE_EFFECTS__
-export function mask(cc: number | string, num = 4, mask = "*") {
+export function mask(cc: number | string, num = 4, mask = "*"): string {
   invariant(cc)
   return `${cc}`.slice(-num).padStart(`${cc}`.length, mask)
 }

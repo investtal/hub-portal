@@ -15,7 +15,7 @@ export function getStrokeRadius(
   thinning: number,
   easing: (t: number) => number,
   pressure = 0.5,
-) {
+): number {
   if (!thinning) {
     return size / 2
   }

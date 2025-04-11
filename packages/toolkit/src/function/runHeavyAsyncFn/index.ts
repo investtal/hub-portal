@@ -5,7 +5,7 @@
  * @returns a Promise, listening for onmessage and onerror events and resolving the data posted back from the worker, or throwing an error.
  */
 // @__NO_SIDE_EFFECTS__
-export const runAsync = (fn: () => void) => {
+export const runAsync = (fn: () => void): Promise<void> => {
   const worker = new Worker(URL.createObjectURL(new Blob([`postMessage((${fn})());`])))
 
   return new Promise((res, rej) => {

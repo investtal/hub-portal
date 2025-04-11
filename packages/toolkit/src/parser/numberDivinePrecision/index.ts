@@ -11,16 +11,18 @@ import { timesPrecision } from "../numberTimesPrecision"
  * @param nums The numbers to divide
  */
 // @__NO_SIDE_EFFECTS__
-export const dividePrecision = createOperationPrecision((num1, num2) => {
-  const num1Changed = float2FixedPrecision(num1)
-  const num2Changed = float2FixedPrecision(num2)
+export const dividePrecision: (num1: number, num2: number) => number = createOperationPrecision(
+  (num1, num2) => {
+    const num1Changed = float2FixedPrecision(num1)
+    const num2Changed = float2FixedPrecision(num2)
 
-  checkBoundaryPrecision(num1Changed)
-  checkBoundaryPrecision(num2Changed)
+    checkBoundaryPrecision(num1Changed)
+    checkBoundaryPrecision(num2Changed)
 
-  // fix: Something like 10 ** -4 is 0.00009999999999999999, strip corrected
-  return timesPrecision(
-    num1Changed / num2Changed,
-    stripPrecision(10 ** (digitLengthPrecision(num2) - digitLengthPrecision(num1))),
-  )
-})
+    // fix: Something like 10 ** -4 is 0.00009999999999999999, strip corrected
+    return timesPrecision(
+      num1Changed / num2Changed,
+      stripPrecision(10 ** (digitLengthPrecision(num2) - digitLengthPrecision(num1))),
+    )
+  },
+)

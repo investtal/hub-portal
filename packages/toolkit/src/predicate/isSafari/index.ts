@@ -1,5 +1,5 @@
 // @__NO_SIDE_EFFECTS__
-export function isSafari() {
+export function isSafari(): boolean {
   return (
     typeof navigator !== "undefined" &&
     navigator.vendor.indexOf("Apple") > -1 &&

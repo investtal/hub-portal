@@ -1,4 +1,3 @@
-import type { EntityId } from "@techmely/types"
 import { isNumber } from "../../predicate/isNumber"
 import { dividePrecision } from "../numberDivinePrecision"
 import { timesPrecision } from "../numberTimesPrecision"
@@ -10,7 +9,7 @@ import { timesPrecision } from "../numberTimesPrecision"
  * @param decimal An integer specifying the decimal digits
  */
 // @__NO_SIDE_EFFECTS__
-export function roundPrecision(num: EntityId, decimal: number): number {
+export function roundPrecision(num: number, decimal: number): number {
   const base = 10 ** decimal
   let result = dividePrecision(Math.round(Math.abs(timesPrecision(num, base))), base)
 

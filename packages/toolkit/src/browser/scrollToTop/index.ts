@@ -5,7 +5,7 @@ import { isServer } from "../../predicate/isServer"
  * Use Window.requestAnimationFrame() to animate the scrolling
  */
 // @__NO_SIDE_EFFECTS__
-export function scrollToTop() {
+export function scrollToTop(): void {
   if (isServer()) return
 
   const c = document.documentElement.scrollTop || document.body.scrollTop

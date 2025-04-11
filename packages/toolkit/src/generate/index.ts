@@ -1,3 +1,4 @@
+export * from "./baseX"
 export * from "./generateSampleArray"
 export * from "./getRandomInt"
 export * from "./getRandomIntInclusive"
