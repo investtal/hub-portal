@@ -2,7 +2,7 @@ import { findLastIndex } from "../../array/findLastIndex"
 import { getGitTags } from "../getGitTags"
 
 // @__NO_SIDE_EFFECTS__
-export async function getAppVersion(pkgName: string) {
+export async function getAppVersion(pkgName: string): Promise<string> {
   const tags = await getGitTags()
   const tag = findLastIndex(tags, tag => tag.startsWith(pkgName))
   if (tag === -1) {
