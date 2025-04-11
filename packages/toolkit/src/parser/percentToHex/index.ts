@@ -1,4 +1,4 @@
-import type { ComputeRange } from "@techmely/types"
+import type { ComputeRange } from "@investtal/types"
 
 type MAXIMUM_ALLOWED_BOUNDARY = 101
 

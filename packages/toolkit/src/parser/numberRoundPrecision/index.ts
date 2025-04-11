@@ -1,4 +1,4 @@
-import type { EntityId } from "@techmely/types"
+import type { EntityId } from "@investtal/types"
 import { isNumber } from "../../predicate/isNumber"
 import { dividePrecision } from "../numberDivinePrecision"
 import { timesPrecision } from "../numberTimesPrecision"
