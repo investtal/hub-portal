@@ -1,6 +1,12 @@
 # hub-portal
 The hub shares our work to execute our vision about ...
 
+## Packages
+
+- [http](./packages/http)
+- [toolkit](./packages/toolkit)
+- [types](./packages/types)
+
 ## Plugins
 
 - [bundlesize-limiter](./plugins/bundlesize-limiter)

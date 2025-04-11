@@ -9,7 +9,6 @@ tasks:
       - "@globs(configs)"
     outputs:
       - "dist"
-    local: true
 
   build.watch:
     command: "tsdown --watch"

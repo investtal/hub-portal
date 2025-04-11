@@ -15,5 +15,6 @@ export default defineConfig({
   target: "es2022",
   dts: { transformer: "oxc" },
   external,
+  sourcemap: true,
   clean: true,
 })
