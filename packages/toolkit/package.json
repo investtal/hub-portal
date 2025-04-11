@@ -4,12 +4,32 @@
   "author": "harrytran998",
   "description": "Investtal toolkit",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "private": false,
   "license": "MIT",
+  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
   "devDependencies": {
     "@investtal/types": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./file": {
+      "types": "./dist/file/index.d.ts",
+      "import": "./dist/file/index.js"
+    },
+    "./git": {
+      "types": "./dist/git/index.d.ts",
+      "import": "./dist/git/index.js"
+    },
+    "./stream": {
+      "types": "./dist/stream/index.d.ts",
+      "import": "./dist/stream/index.js"
+    }
   },
   "engines": {
     "node": ">=22"
