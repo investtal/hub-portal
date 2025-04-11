@@ -1,9 +1,12 @@
 import path from "node:path"
-import type { StringEnum } from "@techmely/types"
+import type { StringEnum } from "@investtal/types"
 import esbuild from "esbuild"
 
 // @__NO_SIDE_EFFECTS__
-export async function getBundleSize(pkg: StringEnum<"@techmely/es-toolkit">, funcName: string) {
+export async function getBundleSize(
+  pkg: StringEnum<"@investtal/es-toolkit">,
+  funcName: string,
+): Promise<number> {
   const script = `import { ${funcName} } from "${pkg}"; console.log(${funcName})`
 
   const bundled = await esbuild.build({
