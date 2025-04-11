@@ -54,7 +54,7 @@ const defaultOptions: Required<DebouncerOptions> = {
  * });
  * ```
  */
-export class Debouncer<TFn extends (...args: Array<any>) => any, TArgs extends Parameters<TFn>> {
+class Debouncer<TFn extends (...args: Array<any>) => any, TArgs extends Parameters<TFn>> {
   private canLeadingExecute = true
   private isPending = false
   private executionCount = 0
@@ -176,7 +176,7 @@ export class Debouncer<TFn extends (...args: Array<any>) => any, TArgs extends P
 export function debounce<TFn extends (...args: Array<any>) => any>(
   fn: TFn,
   initialOptions: Omit<DebouncerOptions, "enabled">,
-) {
+): (...args: Parameters<TFn>) => void {
   const debouncer = new Debouncer(fn, initialOptions)
   return debouncer.maybeExecute.bind(debouncer)
 }

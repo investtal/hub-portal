@@ -11,7 +11,7 @@ const processShims: Partial<Process> = {
   versions: {},
 }
 
-export const globProcess = new Proxy<Process>(_process, {
+export const globProcess: Process = new Proxy<Process>(_process, {
   get(target, prop: keyof Process) {
     if (prop === "env") {
       return envShims()

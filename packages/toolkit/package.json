@@ -8,14 +8,6 @@
   "type": "module",
   "private": false,
   "license": "MIT",
-  "peerDependencies": {
-    "base-x": "^3.0.10"
-  },
-  "peerDependenciesMeta": {
-    "base-x": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@investtal/types": "workspace:*"
   },

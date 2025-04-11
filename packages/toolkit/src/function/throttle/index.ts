@@ -213,7 +213,7 @@ export class Throttler<TFn extends (...args: Array<any>) => any, TArgs extends P
 export function throttle<TFn extends (...args: Array<any>) => any>(
   fn: TFn,
   initialOptions: Omit<ThrottlerOptions, "enabled">,
-) {
+): (...args: Parameters<TFn>) => void {
   const throttler = new Throttler(fn, initialOptions)
   return throttler.maybeExecute.bind(throttler)
 }
