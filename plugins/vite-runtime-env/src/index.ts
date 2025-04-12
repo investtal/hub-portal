@@ -96,7 +96,7 @@ const viteRuntimeEnv = (options?: RuntimeEnvPluginOptions): Plugin => {
   }
 }
 
-export function getDefaultMetadataConfig() {
+export function getDefaultMetadataConfig(): Record<string, string> {
   const pkgJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
   const { version: appVersion } = pkgJson
   const gitBranchName = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
@@ -115,7 +115,7 @@ export function getDefaultMetadataConfig() {
   }
 }
 
-function genConfigString(mode: string, isDev: boolean, injectVariable: string) {
+function genConfigString(mode: string, isDev: boolean, injectVariable: string): string {
   /*
    * @link https://vite.dev/guide/env-and-mode.html#env-files
    * Do not modify 4 line of getting the envs! It's standard of Vite ENV
@@ -132,11 +132,11 @@ function genConfigString(mode: string, isDev: boolean, injectVariable: string) {
   return injectConfigString(envObj, injectVariable)
 }
 
-function getEnvWithPath(file: string) {
+function getEnvWithPath(file: string): DotenvParseOutput {
   return dotenv.config({ path: path.resolve(process.cwd(), file) }).parsed || {}
 }
 
-function injectConfigString(config: DotenvParseOutput, injectVariable: string) {
+function injectConfigString(config: DotenvParseOutput, injectVariable: string): string {
   return `window.${injectVariable} = ${JSON.stringify(config)}`
 }
 
