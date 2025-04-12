@@ -3,4 +3,4 @@ language: "typescript"
 
 workspace:
   inheritedTasks:
-    include: []
+    exclude: [build, build.watch]
