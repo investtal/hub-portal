@@ -41,7 +41,6 @@
     "react-dom": "^18.3.1",
     "tsarch": "5.4.1",
     "tslib": "2.8.1",
-    "tsup": "^8.3.6",
     "tsdown": "^0.7.5",
     "typescript": "^5.7.3",
     "vite": "^6.1.1",

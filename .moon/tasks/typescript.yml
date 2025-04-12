@@ -20,7 +20,7 @@ fileGroups:
 
 tasks:
   build:
-    command: "tsup"
+    command: "tsdown"
     inputs:
       - "@globs(sources)"
       - "@globs(configs)"
@@ -28,7 +28,7 @@ tasks:
       - "dist"
 
   build.watch:
-    command: "tsup --watch"
+    command: "tsdown --watch"
     inputs:
       - "@globs(sources)"
       - "@globs(configs)"
