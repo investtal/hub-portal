@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.1.0
+
+### Minor Changes
+
+- add lowercase first fn + fix vitest
+
 ## 1.0.3
 
 ### Patch Changes
