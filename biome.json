@@ -55,7 +55,7 @@
     }
   },
   "files": {
-    "include": ["*"],
+    "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.json"],
     "ignore": [
       "node_modules",
       "coverage",

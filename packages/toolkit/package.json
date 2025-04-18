@@ -9,13 +9,7 @@
   "type": "module",
   "private": false,
   "license": "MIT",
-  "files": [
-    "dist",
-    "package.json",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENSE"
-  ],
+  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
   "devDependencies": {
     "@investtal/types": "workspace:*"
   },
