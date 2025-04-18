@@ -1,6 +1,6 @@
 {
   "name": "@investtal/toolkit",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "harrytran998",
   "description": "Investtal toolkit",
   "main": "dist/index.js",
