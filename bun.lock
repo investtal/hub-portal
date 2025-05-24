@@ -48,10 +48,6 @@
       "version": "1.1.0",
       "devDependencies": {
         "@investtal/types": "workspace:*",
-        "@types/react": "^18.3.12",
-      },
-      "peerDependencies": {
-        "react": "^18.3.1",
       },
     },
     "packages/types": {
