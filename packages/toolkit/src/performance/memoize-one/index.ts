@@ -1,22 +1,10 @@
-// Number.isNaN as it is not supported in IE11 so conditionally using ponyfill
-// Using Number.isNaN where possible as it is ~10% faster
-
-const safeIsNaN =
-  Number.isNaN ||
-  function ponyfill(value: unknown): boolean {
-    // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#polyfill
-    // NaN is the only value in JavaScript which is not equal to itself.
-    // eslint-disable-next-line
-    return typeof value === "number"
-  }
-
 function isEqual(first: unknown, second: unknown): boolean {
   if (first === second) {
     return true
   }
 
   // Special case for NaN (NaN !== NaN)
-  if (safeIsNaN(first) && safeIsNaN(second)) {
+  if (Number.isNaN(first) && Number.isNaN(second)) {
     return true
   }
 

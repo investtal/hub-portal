@@ -11,11 +11,7 @@
   "license": "MIT",
   "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
   "devDependencies": {
-    "@investtal/types": "workspace:*",
-    "@types/react": "^18.3.12"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1"
+    "@investtal/types": "workspace:*"
   },
   "exports": {
     ".": {
