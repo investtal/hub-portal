@@ -43,7 +43,7 @@ type Cache<TFunc extends (this: any, ...args: any[]) => any> = {
   lastResult: ReturnType<TFunc>
 }
 
-function memoizeOne<TFunc extends (this: any, ...newArgs: any[]) => any>(
+export function memoizeOne<TFunc extends (this: any, ...newArgs: any[]) => any>(
   resultFn: TFunc,
   isEqual: EqualityFn<TFunc> = areInputsEqual,
 ): MemoizedFn<TFunc> {
@@ -78,5 +78,3 @@ function memoizeOne<TFunc extends (this: any, ...newArgs: any[]) => any>(
 
   return memoized
 }
-
-export default memoizeOne
