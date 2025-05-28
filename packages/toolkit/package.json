@@ -1,6 +1,6 @@
 {
   "name": "@investtal/toolkit",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "harrytran998",
   "description": "Investtal toolkit",
   "main": "dist/index.js",
@@ -9,7 +9,13 @@
   "type": "module",
   "private": false,
   "license": "MIT",
-  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@investtal/types": "workspace:*"
   },
