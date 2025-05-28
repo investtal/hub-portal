@@ -1,10 +1,9 @@
 // @__NO_SIDE_EFFECTS__
 export function isIOS(): boolean {
-  return typeof navigator !== "undefined"
-    ? ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(
-        navigator.platform,
-      ) ||
-        // iPad on iOS 13 detection
-        (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-    : false
+  return (
+    typeof window !== "undefined" &&
+    window.navigator != null &&
+    (/iPad|iPhone|iPod/.test(window.navigator.userAgent) ||
+      (window.navigator.userAgent.includes("Mac") && window.navigator.maxTouchPoints > 1))
+  )
 }
