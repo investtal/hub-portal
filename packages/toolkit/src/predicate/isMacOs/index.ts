@@ -1,7 +1,10 @@
-import { globProcess } from "../../object/process"
-
-/** Detect if process.platform is macOS (darwin kernel) */
+/** Detect if user browser is MacOS */
 // @__NO_SIDE_EFFECTS__
-export function isMacOS(): boolean {
-  return /^darwin/i.test(globProcess.platform || "")
+export function isMacOs(): boolean {
+  return (
+    typeof window !== "undefined" &&
+    window.navigator != null &&
+    (/iPad|iPhone|iPod/.test(window.navigator.userAgent) ||
+      (window.navigator.userAgent.includes("Mac") && window.navigator.maxTouchPoints > 1))
+  )
 }
