@@ -1,11 +1,21 @@
 import type { CamelToSnakeNested } from "@investtal/types"
 import { camel2snake } from "../camel2Snake"
 
-// @__NO_SIDE_EFFECTS__
-export function camel2SnakeObject<T extends Object>(obj: T): CamelToSnakeNested<T> {
-  return Object.entries(obj).reduce(
-    // biome-ignore lint/performance/noAccumulatingSpread: Ignore here
-    (acc, cur) => ({ ...acc, [camel2snake(cur[0])]: cur[1] }),
-    {} as CamelToSnakeNested<T>,
-  )
+export function camel2SnakeObject<T>(obj: T): CamelToSnakeNested<T> {
+  if (Array.isArray(obj)) {
+    return obj.map(item => camel2SnakeObject(item)) as CamelToSnakeNested<T>
+  }
+
+  if (obj !== null && typeof obj === "object") {
+    return Object.entries(obj).reduce(
+      (acc, [key, value]) => {
+        const newKey = camel2snake(key)
+        acc[newKey] = camel2SnakeObject(value)
+        return acc
+      },
+      {} as Record<string, any>,
+    ) as CamelToSnakeNested<T>
+  }
+
+  return obj as CamelToSnakeNested<T>
 }

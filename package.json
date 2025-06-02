@@ -1,10 +1,7 @@
 {
   "name": "@investtal/hub-portal",
   "private": true,
-  "workspaces": [
-    "plugins/*",
-    "packages/*"
-  ],
+  "workspaces": ["plugins/*", "packages/*"],
   "scripts": {
     "build": "moon :build",
     "clean": "moon :clean && rm -rf bun.lock node_modules",
@@ -59,14 +56,8 @@
   "jscpd": {
     "threshold": 0.1,
     "pattern": "packages/**/src/**/*.ts",
-    "reporters": [
-      "html",
-      "console"
-    ],
-    "ignore": [
-      "**/__snapshots__/**",
-      "packages/**/test/**/*.ts"
-    ],
+    "reporters": ["html", "console"],
+    "ignore": ["**/__snapshots__/**", "packages/**/test/**/*.ts"],
     "absolute": true,
     "gitignore": true
   }

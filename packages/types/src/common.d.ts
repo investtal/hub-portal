@@ -67,3 +67,13 @@ export type CamelToSnakeNested<T> = T extends object
       [K in keyof T as CamelToSnakeCase<K & string>]: CamelToSnakeNested<T[K]>
     }
   : T
+
+export type SnakeToCamelCase<S extends string> = S extends `${infer Head}_${infer Tail}`
+  ? `${Head}${Capitalize<SnakeToCamelCase<Tail>>}`
+  : S
+
+export type SnakeToCamelNested<T> = T extends object
+  ? {
+      [K in keyof T as SnakeToCamelCase<K & string>]: SnakeToCamelNested<T[K]>
+    }
+  : T
