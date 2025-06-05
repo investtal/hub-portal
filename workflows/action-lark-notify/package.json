@@ -1,0 +1,33 @@
+{
+  "name": "@investtal/action-lark-notify",
+  "version": "1.0.0",
+  "author": {
+    "email": "nhattq.coding@gmail.com",
+    "name": "Harry Tran"
+  },
+  "description": "Lark notify action for investtal",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/http-client": "^2.2.3",
+    "shelljs": "^0.10.0",
+    "zod": "^3.25.49"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.16",
+    "@github/local-action": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  }
+}

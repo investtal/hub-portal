@@ -1,0 +1,7 @@
+name: "@investtal/action-lark-notify"
+description: "Notify in Lark"
+author: "investtal"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
