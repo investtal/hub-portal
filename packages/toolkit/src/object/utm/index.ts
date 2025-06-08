@@ -3,7 +3,7 @@ export type UtmSourceParams = {
   utmSource: string
   utmMedium: string
   utmCampaign: string
-  utmContent: string
+  utmContent?: string
   utmTerm?: string
 }
 
