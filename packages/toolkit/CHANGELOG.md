@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.4.1
+
+### Patch Changes
+
+- Update not required utmContent for getUtmSourceUrl"
+
 ## 1.4.0
 
 ### Minor Changes
