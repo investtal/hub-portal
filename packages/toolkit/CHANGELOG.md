@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.4.2
+
+### Patch Changes
+
+- feat: add string/ReadingTime function
+
 ## 1.4.1
 
 ### Patch Changes

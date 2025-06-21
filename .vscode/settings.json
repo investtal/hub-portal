@@ -51,6 +51,9 @@
   "[css][scss][sass]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "[json][jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
   },

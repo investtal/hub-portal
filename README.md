@@ -28,3 +28,14 @@ bun run build
 1. Run `bun run build` to build the project
 2. Cd to `plugins/name-of-plugin` and run `bun link` to link the package to global node_modules
 3. Can go to the application and install the package from local like: `"@investtal/name-of-plugin": "workspace:*"`
+
+## How to bump version
+
+```bash
+bun changeset # --> Pick version
+bun changeset version # --> Bump version
+bun changeset tag # --> Build new git tags
+git push --follow-tags
+
+moon :publish # --> Publish all packages
+```
