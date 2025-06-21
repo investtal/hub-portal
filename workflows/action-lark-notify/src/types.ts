@@ -1,10 +1,10 @@
 export interface RequestSignature {
-  timestamp?: string;
-  sign?: string;
+  timestamp?: string
+  sign?: string
 }
 
 export interface LarkResponse {
-  code: number;
-  msg: string;
-  data: any;
+  code: number
+  msg: string
+  data: any
 }
