@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.4.3
+
+### Patch Changes
+
+- 9b0c157: Remove getArticleReadingTime function
+
 ## 1.4.2
 
 ### Patch Changes
