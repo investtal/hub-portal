@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.4.4
+
+### Patch Changes
+
+- Add missing re-export reading time fnc
+
 ## 1.4.3
 
 ### Patch Changes
