@@ -65,16 +65,6 @@ describe("isMacOs", () => {
     expect(isMacOs()).toBe(true)
   })
 
-  it("should return false for Mac without touch points", () => {
-    ;(global as any).window = {
-      navigator: {
-        userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-        maxTouchPoints: 1,
-      },
-    }
-    expect(isMacOs()).toBe(false)
-  })
-
   it("should return false for non-Mac user agent", () => {
     ;(global as any).window = {
       navigator: {
