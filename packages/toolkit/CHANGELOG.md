@@ -1,5 +1,11 @@
 # @investtal/toolkit
 
+## 1.4.5
+
+### Patch Changes
+
+- Fix isMacOs function
+
 ## 1.4.4
 
 ### Patch Changes
