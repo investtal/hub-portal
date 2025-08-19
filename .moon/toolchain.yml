@@ -3,8 +3,6 @@ $schema: "https://moonrepo.dev/schemas/toolchain.json"
 node:
   version: "22.11.0"
   packageManager: "bun"
-  bun:
-    version: "1.2.8"
   addEnginesConstraint: true
   syncPackageManagerField: true
   rootPackageOnly: true
