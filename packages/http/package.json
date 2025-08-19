@@ -14,7 +14,13 @@
   "engines": {
     "node": ">=22"
   },
-  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public",
     "tag": "latest",

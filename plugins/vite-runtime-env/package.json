@@ -10,7 +10,7 @@
   "private": false,
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.5.0"
+    "dotenv": "^17.2.1"
   },
   "engines": {
     "node": ">=22"

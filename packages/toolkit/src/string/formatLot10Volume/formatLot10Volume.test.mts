@@ -1,6 +1,6 @@
 import { expect, test } from "vitest"
-import { formatLot10Volume } from "."
 import { isNumber } from "../../predicate"
+import { formatLot10Volume } from "."
 
 const dataTestFormat10Volume = [
   [123123, 0, "-", "1,231,23"],

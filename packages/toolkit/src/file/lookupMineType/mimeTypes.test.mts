@@ -1,5 +1,5 @@
 import { describe, expect } from "vitest"
-import { MIME_TYPES, lookupMineType } from "."
+import { lookupMineType, MIME_TYPES } from "."
 
 describe("Look up mine types", () => {
   expect(lookupMineType("foobar")).toBe(undefined)

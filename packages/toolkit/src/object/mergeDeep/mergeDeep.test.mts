@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
-import { mergeDeep } from "."
 import { camel2SnakeObject } from "../../string/camel2SnakeObject"
+import { mergeDeep } from "."
 
 describe("Object test", () => {
   describe("mergeDeep", () => {

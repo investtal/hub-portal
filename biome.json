@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -13,26 +11,26 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "recommended": true
+        "recommended": true,
+        "noUnknownPseudoElement": "off"
       },
       "style": {
         "recommended": true,
-        "noArguments": "off",
-        "noParameterAssign": "warn"
+        "noParameterAssign": "warn",
+        "noDescendingSpecificity": "off"
       },
       "suspicious": {
         "noExplicitAny": "off",
-        "noConfusingVoidType": "off"
+        "noConfusingVoidType": "off",
+        "noDuplicateProperties": "off"
       },
       "complexity": {
         "noUselessConstructor": "off",
-        "noBannedTypes": "warn"
+        "noBannedTypes": "warn",
+        "noArguments": "off"
       },
       "nursery": {
-        "recommended": true,
-        "noUnknownPseudoElement": "off",
-        "noDescendingSpecificity": "off",
-        "noDuplicateProperties": "off"
+        "recommended": true
       }
     }
   },
@@ -55,15 +53,17 @@
     }
   },
   "files": {
-    "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.json"],
-    "ignore": [
-      "node_modules",
-      "coverage",
-      "dist",
-      "plugins/**/node_modules",
-      "plugins/**/dist",
-      "plugins/**/**/*.d.ts",
-      "tools"
+    "includes": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.json",
+      "!**/node_modules",
+      "!**/coverage",
+      "!**/dist",
+      "!**/plugins/**/node_modules",
+      "!**/plugins/**/dist",
+      "!**/tools"
     ]
   }
 }

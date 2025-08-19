@@ -15,16 +15,22 @@
     "@actions/core": "^1.11.1",
     "@actions/http-client": "^2.2.3",
     "shelljs": "^0.10.0",
-    "zod": "^3.25.49"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
-    "@types/shelljs": "^0.8.16",
-    "@github/local-action": "^3.2.1"
+    "@types/shelljs": "^0.8.17",
+    "@github/local-action": "^5.1.0"
   },
   "engines": {
     "node": ">=22"
   },
-  "files": ["dist", "package.json", "README.md", "CHANGELOG.md", "LICENSE"],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public",
     "tag": "latest",
